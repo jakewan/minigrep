@@ -2,12 +2,14 @@ use std::env;
 use std::error::Error;
 use std::fs;
 
+/// Look at this struct called Config!
 pub struct Config {
     pub query: String,
     pub filename: String,
     pub case_sensitive: bool,
 }
 
+/// Look at this implementation of Config!
 impl Config {
     pub fn new(mut args: env::Args) -> Result<Config, &'static str> {
         args.next();
